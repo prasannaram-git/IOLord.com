@@ -123,15 +123,12 @@
       padding-top: 80px;
     }
 
-    /* ── HERO ── */
+    /* ── HERO (Now acts as About section) ── */
     .hero {
-      min-height: 100vh;
+      padding: 60px 20px;
       display: flex;
       flex-direction: column;
       align-items: center;
-      justify-content: center;
-      text-align: center;
-      padding: 60px 20px 40px;
     }
 
     .hero-icon {
@@ -140,9 +137,9 @@
     }
 
     .hero-icon svg {
-      width: 72px;
-      height: 72px;
-      drop-shadow: 0 0 30px rgba(255, 204, 0, 0.6);
+      width: 56px;
+      height: 56px;
+      filter: drop-shadow(0 0 30px rgba(255, 204, 0, 0.6));
     }
 
     @keyframes float {
@@ -159,31 +156,25 @@
 
     .hero-title {
       font-family: var(--font-display);
-      font-size: clamp(52px, 10vw, 110px);
+      font-size: clamp(48px, 8vw, 90px);
       font-weight: 900;
-      letter-spacing: 0.06em;
+      letter-spacing: 0.08em;
       line-height: 1;
-      background: linear-gradient(135deg, var(--cyan) 0%, var(--purple) 50%, var(--magenta) 100%);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-      margin-bottom: 10px;
+      color: var(--cyan);
+      text-shadow: 0 0 30px rgba(0, 255, 242, 0.5);
+      margin-bottom: 15px;
     }
 
-    .hero-sub {
-      font-family: var(--font-display);
-      font-size: clamp(11px, 2vw, 15px);
-      letter-spacing: 0.3em;
-      color: var(--dim);
-      margin-bottom: 24px;
+    .hero-title span {
+      color: var(--gold);
     }
 
     .hero-desc {
-      font-size: 18px;
+      font-size: 16px;
       font-weight: 500;
       color: rgba(232, 232, 240, 0.7);
       max-width: 480px;
-      margin: 0 auto 40px;
+      margin: 0 auto 30px;
       line-height: 1.5;
     }
 
@@ -192,7 +183,7 @@
       gap: 12px;
       justify-content: center;
       flex-wrap: wrap;
-      margin-bottom: 60px;
+      margin-bottom: 30px;
     }
 
     .badge {
@@ -232,31 +223,8 @@
     }
 
     .scroll-hint {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 8px;
-      font-size: 11px;
-      color: var(--dim);
-      letter-spacing: 0.15em;
-      animation: pulse 2s ease-in-out infinite;
-    }
-
-    .scroll-hint svg {
-      width: 18px;
-      height: 18px;
-    }
-
-    @keyframes pulse {
-
-      0%,
-      100% {
-        opacity: 0.4
-      }
-
-      50% {
-        opacity: 1
-      }
+      display: none;
+      /* Removed scroll hint as games are now visible immediately */
     }
 
     /* ── STATS ── */
@@ -264,10 +232,11 @@
       display: flex;
       justify-content: center;
       gap: clamp(20px, 6vw, 80px);
-      padding: 48px 20px;
+      padding: 40px 20px;
       border-top: 1px solid rgba(255, 255, 255, 0.05);
       border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-      margin-bottom: 80px;
+      margin-top: 40px;
+      margin-bottom: 40px;
     }
 
     .stat-item {
@@ -291,18 +260,20 @@
       margin-top: 4px;
     }
 
-    /* ── GAMES SECTION ── */
+    /* ── GAMES SECTION (Now at the top) ── */
     .games-section {
-      padding: 0 20px 120px;
+      padding: 40px 20px 60px;
       max-width: 1200px;
       margin: 0 auto;
+      position: relative;
+      z-index: 2;
     }
 
     .section-line {
       display: flex;
       align-items: center;
       gap: 16px;
-      margin-bottom: 48px;
+      margin-bottom: 30px;
     }
 
     .section-line::after {
@@ -702,98 +673,13 @@
   </nav>
 
   <main>
-    <!-- HERO -->
-    <section class="hero">
-      <div class="hero-icon">
-        <svg viewBox="0 0 80 64" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <defs>
-            <linearGradient id="crownGrad" x1="0" y1="0" x2="80" y2="64" gradientUnits="userSpaceOnUse">
-              <stop offset="0%" stop-color="#ffee44" />
-              <stop offset="100%" stop-color="#ff9900" />
-            </linearGradient>
-            <filter id="glow">
-              <feGaussianBlur stdDeviation="3" result="coloredBlur" />
-              <feMerge>
-                <feMergeNode in="coloredBlur" />
-                <feMergeNode in="SourceGraphic" />
-              </feMerge>
-            </filter>
-          </defs>
-          <polygon points="4,54 16,18 40,42 64,18 76,54" fill="url(#crownGrad)" filter="url(#glow)" />
-          <rect x="4" y="53" width="72" height="8" rx="4" fill="url(#crownGrad)" filter="url(#glow)" />
-          <circle cx="4" cy="18" r="6" fill="#ffe566" />
-          <circle cx="40" cy="6" r="6" fill="#ffe566" />
-          <circle cx="76" cy="18" r="6" fill="#ffe566" />
-          <circle cx="4" cy="18" r="3" fill="#fff" opacity="0.6" />
-          <circle cx="40" cy="6" r="3" fill="#fff" opacity="0.6" />
-          <circle cx="76" cy="18" r="3" fill="#fff" opacity="0.6" />
-        </svg>
-      </div>
-
-      <h1 class="hero-title">IOLORD</h1>
-      <p class="hero-sub">FREE BROWSER GAMES PORTAL</p>
-      <p class="hero-desc">No downloads. No accounts. Just pick a game and play instantly — with players from around the
-        world.</p>
-
-      <div class="hero-badges">
-        <span class="badge badge-free">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <circle cx="12" cy="12" r="10" />
-            <polyline points="7,12 10,15 17,9" stroke-linecap="round" stroke-linejoin="round" />
-          </svg>
-          100% FREE
-        </span>
-        <span class="badge badge-no-download">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <rect x="3" y="3" width="18" height="18" rx="2" />
-            <line x1="9" y1="9" x2="15" y2="15" stroke-linecap="round" />
-            <line x1="15" y1="9" x2="9" y2="15" stroke-linecap="round" />
-          </svg>
-          NO DOWNLOAD
-        </span>
-        <span class="badge badge-multiplayer">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <circle cx="12" cy="12" r="10" />
-            <ellipse cx="12" cy="12" rx="4" ry="10" />
-            <line x1="2" y1="12" x2="22" y2="12" />
-          </svg>
-          MULTIPLAYER
-        </span>
-      </div>
-
-      <div class="scroll-hint">
-        CHOOSE YOUR GAME
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
-          stroke-linejoin="round">
-          <polyline points="6,9 12,15 18,9" />
-        </svg>
-      </div>
-    </section>
-
-    <!-- STATS -->
-    <div class="stats-bar">
-      <div class="stat-item">
-        <div class="stat-num">1</div>
-        <div class="stat-label">GAMES LIVE</div>
-      </div>
-      <div class="stat-item">
-        <div class="stat-num">10</div>
-        <div class="stat-label">ARENA LEVELS</div>
-      </div>
-      <div class="stat-item">
-        <div class="stat-num">∞</div>
-        <div class="stat-label">REPLAYS</div>
-      </div>
-    </div>
-
-    <!-- GAMES -->
+    <!-- GAMES (Moved up to be immediately visible) -->
     <section class="games-section" id="games">
       <div class="section-line">
         <h2 class="section-title">PLAY NOW</h2>
       </div>
 
       <div class="games-grid">
-
         <!-- DashKill Card -->
         <a class="game-card active" href="https://dashkill.iolord.com" target="_blank" rel="noopener">
           <div class="card-banner banner-dashkill">
@@ -893,9 +779,87 @@
 
       </div>
     </section>
+
+
+    <!-- HERO -->
+    <section class="hero" id="about">
+      <div class="hero-icon">
+        <svg viewBox="0 0 80 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <linearGradient id="crownGrad" x1="0" y1="0" x2="80" y2="64" gradientUnits="userSpaceOnUse">
+              <stop offset="0%" stop-color="#ffee44" />
+              <stop offset="100%" stop-color="#ff9900" />
+            </linearGradient>
+            <filter id="glow">
+              <feGaussianBlur stdDeviation="3" result="coloredBlur" />
+              <feMerge>
+                <feMergeNode in="coloredBlur" />
+                <feMergeNode in="SourceGraphic" />
+              </feMerge>
+            </filter>
+          </defs>
+          <polygon points="4,54 16,18 40,42 64,18 76,54" fill="url(#crownGrad)" filter="url(#glow)" />
+          <rect x="4" y="53" width="72" height="8" rx="4" fill="url(#crownGrad)" filter="url(#glow)" />
+          <circle cx="4" cy="18" r="6" fill="#ffe566" />
+          <circle cx="40" cy="6" r="6" fill="#ffe566" />
+          <circle cx="76" cy="18" r="6" fill="#ffe566" />
+          <circle cx="4" cy="18" r="3" fill="#fff" opacity="0.6" />
+          <circle cx="40" cy="6" r="3" fill="#fff" opacity="0.6" />
+          <circle cx="76" cy="18" r="3" fill="#fff" opacity="0.6" />
+        </svg>
+      </div>
+
+      <h1 class="hero-title">IO<span>LORD</span></h1>
+      <p class="hero-desc">No downloads. No accounts. Just pick a game and play instantly — with players from around the
+        world.</p>
+
+      <div class="hero-badges">
+        <span class="badge badge-free">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="10" />
+            <polyline points="7,12 10,15 17,9" stroke-linecap="round" stroke-linejoin="round" />
+          </svg>
+          100% FREE
+        </span>
+        <span class="badge badge-no-download">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <rect x="3" y="3" width="18" height="18" rx="2" />
+            <line x1="9" y1="9" x2="15" y2="15" stroke-linecap="round" />
+            <line x1="15" y1="9" x2="9" y2="15" stroke-linecap="round" />
+          </svg>
+          NO DOWNLOAD
+        </span>
+        <span class="badge badge-multiplayer">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="10" />
+            <ellipse cx="12" cy="12" rx="4" ry="10" />
+            <line x1="2" y1="12" x2="22" y2="12" />
+          </svg>
+          MULTIPLAYER
+        </span>
+      </div>
+
+    </section>
+
+
+    <!-- STATS (Moved below games) -->
+    <div class="stats-bar">
+      <div class="stat-item">
+        <div class="stat-num">1</div>
+        <div class="stat-label">GAMES LIVE</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-num">10</div>
+        <div class="stat-label">ARENA LEVELS</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-num">∞</div>
+        <div class="stat-label">REPLAYS</div>
+      </div>
+    </div>
   </main>
 
-  <footer id="about">
+  <footer>
     <div class="footer-logo">
       <svg viewBox="0 0 40 32" fill="none" xmlns="http://www.w3.org/2000/svg">
         <polygon points="2,28 8,10 20,22 32,10 38,28" stroke="#ffcc00" stroke-width="2.5" stroke-linejoin="round" />
