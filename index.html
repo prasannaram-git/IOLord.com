@@ -795,7 +795,7 @@
       <div class="games-grid">
 
         <!-- DashKill Card -->
-        <a class="game-card active" href="https://dashkill-io.onrender.com" target="_blank" rel="noopener">
+        <a class="game-card active" href="https://dashkill.iolord.com" target="_blank" rel="noopener">
           <div class="card-banner banner-dashkill">
             <canvas id="dk-canvas"></canvas>
             <div class="banner-title">
@@ -976,7 +976,7 @@
       const el = document.getElementById('dk-online');
       async function fetchCount() {
         try {
-          const res = await fetch('https://dashkill-io.onrender.com/health', { signal: AbortSignal.timeout(4000) });
+          const res = await fetch('https://dashkill.iolord.com/health', { signal: AbortSignal.timeout(4000) });
           const data = await res.json();
           el.textContent = `${data.players || 0} Playing Now`;
         } catch { el.textContent = 'Play Now!'; }
