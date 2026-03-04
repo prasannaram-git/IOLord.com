@@ -4,22 +4,21 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>IOLORD — Free Browser Games Portal | Play Top .IO Games Unblocked</title>
+  <title>IOLORD — Premium Free Browser Games Portal</title>
   <meta name="description"
-    content="IOLORD is the ultimate free browser games hub. Play DashKill.io and top multiplayer .io games unblocked. No download needed, instant play from anywhere!">
+    content="IOLORD is the ultimate free browser games hub. Play RagRush and DashKill.io unblocked. No downloads, instant play!">
   <meta name="keywords"
-    content="io games, free browser games, unblocked games, multiplayer games, online games, dashkill, iolord, play games for free, no download games, web games">
+    content="io games, free browser games, unblocked games, ragrush, dashkill, iolord, play games for free, web games">
   <meta name="author" content="IOLORD">
   <meta name="robots" content="index, follow">
-  <meta name="google-site-verification" content="uNfcYH1gTpimBcSsahIhzKdi7d7S3yMFPvyALVq6-FE" />
   <link rel="canonical" href="https://www.iolord.com/">
 
-  <meta name="theme-color" content="#0a0a12">
+  <meta name="theme-color" content="#02040a">
 
   <!-- Open Graph -->
-  <meta property="og:title" content="IOLORD — Play Top Free Browser .IO Games">
+  <meta property="og:title" content="IOLORD — Premium Free Browser Games Portal">
   <meta property="og:description"
-    content="Play epic .io games free in your browser. No download needed! Featuring the hit game DashKill.io.">
+    content="Play epic .io games free in your browser. No download needed! Featuring the hit games RagRush and DashKill.io.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://www.iolord.com/">
   <meta property="og:image" content="https://www.iolord.com/assets/iolord-logo-nobg.png">
@@ -27,9 +26,8 @@
 
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="IOLORD — Free Browser Games Portal">
-  <meta name="twitter:description"
-    content="Play epic .io games free in your browser. No download needed! Featuring the hit game DashKill.io.">
+  <meta name="twitter:title" content="IOLORD — Premium Free Browser Games">
+  <meta name="twitter:description" content="Play epic .io games free in your browser. No download needed!">
   <meta name="twitter:image" content="https://www.iolord.com/assets/iolord-logo-nobg.png">
 
   <!-- JSON-LD Structured Data -->
@@ -39,25 +37,32 @@
     "@type": "WebSite",
     "name": "IOLORD",
     "url": "https://www.iolord.com/",
-    "description": "IOLORD is the ultimate free browser games hub. Play DashKill.io and top multiplayer .io games unblocked. No download needed, instant play from anywhere!",
+    "description": "IOLORD is the ultimate premium free browser games hub.",
     "publisher": {
       "@type": "Organization",
       "name": "IOLORD",
       "logo": {
         "@type": "ImageObject",
-        "url": "https://www.iolord.com/assets/iolord-logo-nobg.png"
+        "url": "https://www.iolord.com/assets/iolord-logo-nobg.png",
+        "width": 512,
+        "height": 512
       }
     }
   }
   </script>
 
+  <!-- Google Icon fix: Many platforms use manifest.json or icons with backgrounds. 
+       Since iolord-logo-nobg.png is transparent and has white text, it looks invisible on white backgrounds.
+       Browsers will use favicon.svg or apple-touch-icon. -->
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
-  <link rel="apple-touch-icon" href="/assets/iolord-logo-nobg.png">
+  <link rel="apple-touch-icon" href="/favicon.svg">
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
-    href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@400;500;600;700&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;800&family=Orbitron:wght@600;800;900&display=swap"
     rel="stylesheet">
+
   <style>
     *,
     *::before,
@@ -68,17 +73,20 @@
     }
 
     :root {
-      --bg: #0a0a12;
-      --card-bg: rgba(14, 14, 26, 0.9);
-      --cyan: #00fff2;
-      --magenta: #ff00aa;
-      --gold: #ffcc00;
-      --green: #00ff88;
-      --purple: #aa44ff;
-      --text: #e8e8f0;
-      --dim: #6666aa;
-      --font-display: 'Orbitron', monospace;
-      --font-body: 'Rajdhani', sans-serif;
+      --bg-color: #02040a;
+      --bg-gradient: radial-gradient(circle at 50% 0%, #0a1f38 0%, #02040a 60%);
+      --card-bg: rgba(10, 15, 25, 0.4);
+      --card-border: rgba(0, 229, 255, 0.15);
+
+      /* Unified Premium Brand Colors */
+      --brand-cyan: #00e5ff;
+      --brand-cyan-glow: rgba(0, 229, 255, 0.5);
+      --brand-blue: #0055ff;
+      --brand-light: #f0f4f8;
+      --brand-dim: #8b9bb4;
+
+      --font-display: 'Orbitron', sans-serif;
+      --font-body: 'Outfit', sans-serif;
     }
 
     html {
@@ -86,11 +94,30 @@
     }
 
     body {
-      background: var(--bg);
-      color: var(--text);
+      background: var(--bg-color);
+      background-image: var(--bg-gradient);
+      color: var(--brand-light);
       font-family: var(--font-body);
       min-height: 100vh;
       overflow-x: hidden;
+      line-height: 1.6;
+    }
+
+    /* Subtle grid overlay */
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background-image:
+        linear-gradient(rgba(0, 229, 255, 0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0, 229, 255, 0.03) 1px, transparent 1px);
+      background-size: 40px 40px;
+      z-index: 0;
+      pointer-events: none;
+      perspective: 1000px;
+      transform-origin: top;
+      transform: rotateX(60deg) scale(2);
+      opacity: 0.5;
     }
 
     #bg-canvas {
@@ -98,6 +125,7 @@
       inset: 0;
       z-index: 0;
       pointer-events: none;
+      opacity: 0.6;
     }
 
     /* ── NAV ── */
@@ -110,77 +138,91 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
-      padding: 16px 40px;
-      background: rgba(10, 10, 18, 0.82);
-      backdrop-filter: blur(16px);
-      border-bottom: 1px solid rgba(0, 255, 242, 0.08);
+      padding: 20px 50px;
+      background: rgba(2, 4, 10, 0.7);
+      backdrop-filter: blur(20px);
+      border-bottom: 1px solid rgba(0, 229, 255, 0.1);
+      transition: all 0.3s ease;
     }
 
     .nav-logo {
       display: flex;
       align-items: center;
-      gap: 10px;
-      font-family: var(--font-display);
-      font-size: 20px;
-      font-weight: 900;
-      letter-spacing: 0.1em;
-      color: var(--cyan);
-      text-shadow: 0 0 20px rgba(0, 255, 242, 0.4);
+      gap: 12px;
     }
 
     .nav-logo img {
-      height: 60px;
+      height: 50px;
       width: auto;
       object-fit: contain;
-      filter: drop-shadow(0 0 10px rgba(0, 255, 242, 0.4));
-      margin: -10px 0;
+      filter: drop-shadow(0 0 15px var(--brand-cyan-glow));
     }
 
     .nav-links {
       display: flex;
-      gap: 28px;
+      gap: 35px;
     }
 
     .nav-links a {
       font-family: var(--font-body);
       font-weight: 600;
-      font-size: 14px;
-      letter-spacing: 0.08em;
-      color: var(--dim);
+      font-size: 15px;
+      letter-spacing: 0.05em;
+      color: var(--brand-dim);
       text-decoration: none;
-      transition: color 0.2s;
+      text-transform: uppercase;
+      position: relative;
+      transition: color 0.3s;
     }
 
     .nav-links a:hover {
-      color: var(--cyan);
+      color: var(--brand-cyan);
+    }
+
+    .nav-links a::after {
+      content: '';
+      position: absolute;
+      bottom: -6px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 0;
+      height: 2px;
+      background: var(--brand-cyan);
+      transition: width 0.3s ease;
+      box-shadow: 0 0 10px var(--brand-cyan);
+    }
+
+    .nav-links a:hover::after {
+      width: 100%;
     }
 
     /* ── MAIN ── */
     main {
       position: relative;
-      z-index: 1;
-      padding-top: 80px;
+      z-index: 2;
+      padding-top: 100px;
     }
 
-    /* ── HERO (Now acts as About section) ── */
+    /* ── HERO ── */
     .hero {
-      padding: 60px 20px;
+      padding: 80px 20px 40px;
       display: flex;
       flex-direction: column;
       align-items: center;
+      text-align: center;
     }
 
     .hero-icon {
-      margin-bottom: 20px;
-      animation: float 3s ease-in-out infinite;
+      margin-bottom: 30px;
+      animation: float 4s ease-in-out infinite;
     }
 
     .hero-icon img {
       width: 100%;
-      max-width: 450px;
+      max-width: 500px;
       height: auto;
       object-fit: contain;
-      filter: drop-shadow(0 0 40px rgba(0, 255, 242, 0.25));
+      filter: drop-shadow(0 15px 40px rgba(0, 229, 255, 0.2));
     }
 
     @keyframes float {
@@ -191,80 +233,267 @@
       }
 
       50% {
-        transform: translateY(-10px);
+        transform: translateY(-15px);
       }
     }
 
-    /* Removed hero-title since the image contains the wordmark */
-
     .hero-desc {
-      font-size: 16px;
-      font-weight: 500;
-      color: rgba(232, 232, 240, 0.7);
-      max-width: 480px;
-      margin: 0 auto 30px;
-      line-height: 1.5;
+      font-size: 19px;
+      font-weight: 400;
+      color: var(--brand-dim);
+      max-width: 600px;
+      margin: 0 auto 40px;
+      line-height: 1.6;
     }
 
     .hero-badges {
       display: flex;
-      gap: 12px;
+      gap: 15px;
       justify-content: center;
       flex-wrap: wrap;
-      margin-bottom: 30px;
     }
 
     .badge {
       display: flex;
       align-items: center;
-      gap: 6px;
-      padding: 7px 18px;
-      border-radius: 20px;
-      font-size: 12px;
-      font-weight: 700;
+      gap: 8px;
+      padding: 10px 24px;
+      border-radius: 30px;
+      font-size: 13px;
+      font-weight: 800;
       letter-spacing: 0.1em;
-      border: 1px solid;
+      border: 1px solid var(--brand-cyan);
+      color: var(--brand-cyan);
+      background: rgba(0, 229, 255, 0.05);
+      box-shadow: inset 0 0 20px rgba(0, 229, 255, 0.05), 0 4px 15px rgba(0, 229, 255, 0.05);
+      backdrop-filter: blur(10px);
+      text-transform: uppercase;
     }
 
     .badge svg {
-      width: 13px;
-      height: 13px;
-      flex-shrink: 0;
+      width: 16px;
+      height: 16px;
     }
 
-    .badge-free {
-      border-color: var(--green);
-      color: var(--green);
-      background: rgba(0, 255, 136, 0.08);
+    /* ── GAMES SECTION ── */
+    .games-section {
+      padding: 40px 20px 80px;
+      max-width: 1200px;
+      margin: 0 auto;
     }
 
-    .badge-no-download {
-      border-color: var(--cyan);
-      color: var(--cyan);
-      background: rgba(0, 255, 242, 0.08);
+    .section-line {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      margin-bottom: 40px;
     }
 
-    .badge-multiplayer {
-      border-color: var(--magenta);
-      color: var(--magenta);
-      background: rgba(255, 0, 170, 0.08);
+    .section-line::before,
+    .section-line::after {
+      content: '';
+      flex: 1;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, var(--brand-cyan), transparent);
+      opacity: 0.3;
     }
 
-    .scroll-hint {
-      display: none;
-      /* Removed scroll hint as games are now visible immediately */
+    .section-title {
+      font-family: var(--font-display);
+      font-size: clamp(24px, 5vw, 40px);
+      font-weight: 900;
+      letter-spacing: 4px;
+      color: #fff;
+      text-shadow: 0 0 20px var(--brand-cyan-glow);
+      text-transform: uppercase;
+    }
+
+    .games-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+      gap: 30px;
+    }
+
+    /* ── PREMIUM GAME CARD ── */
+    .game-card {
+      position: relative;
+      background: var(--card-bg);
+      backdrop-filter: blur(12px);
+      border-radius: 20px;
+      border: 1px solid var(--card-border);
+      overflow: hidden;
+      transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      cursor: pointer;
+      text-decoration: none;
+      display: flex;
+      flex-direction: column;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    }
+
+    .game-card:hover {
+      transform: translateY(-10px);
+      border-color: var(--brand-cyan);
+      box-shadow: 0 20px 50px rgba(0, 229, 255, 0.2), inset 0 0 20px rgba(0, 229, 255, 0.05);
+    }
+
+    .card-banner {
+      height: 220px;
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+    }
+
+    /* Custom Banners */
+    .banner-ragrush {
+      background: radial-gradient(circle at center, #1a0505 0%, #050101 100%);
+    }
+
+    .banner-dashkill {
+      background: radial-gradient(circle at center, #051a15 0%, #010503 100%);
+    }
+
+    .card-banner h3 {
+      font-family: var(--font-display);
+      font-size: 2.8rem;
+      font-weight: 900;
+      letter-spacing: 5px;
+      position: relative;
+      z-index: 2;
+    }
+
+    .banner-ragrush h3 {
+      color: #fff;
+      text-shadow: 0 0 30px rgba(255, 34, 68, 0.8);
+    }
+
+    .banner-dashkill h3 {
+      color: #fff;
+      text-shadow: 0 0 30px rgba(0, 255, 136, 0.8);
+    }
+
+    .card-body {
+      padding: 30px;
+      flex-grow: 1;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .card-title {
+      font-family: var(--font-display);
+      font-size: 22px;
+      font-weight: 800;
+      letter-spacing: 2px;
+      margin-bottom: 12px;
+    }
+
+    .card-desc {
+      font-size: 15px;
+      color: var(--brand-dim);
+      line-height: 1.6;
+      margin-bottom: 24px;
+      flex-grow: 1;
+    }
+
+    .card-meta {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin-bottom: 24px;
+    }
+
+    .tag {
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: 1px;
+      padding: 6px 14px;
+      border-radius: 6px;
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      color: var(--brand-light);
+      text-transform: uppercase;
+    }
+
+    .card-footer {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-top: 1px solid rgba(255, 255, 255, 0.05);
+      padding-top: 20px;
+    }
+
+    .players-online {
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--brand-light);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .pulse-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--brand-cyan);
+      box-shadow: 0 0 10px var(--brand-cyan);
+      animation: pulseDot 1.5s ease-in-out infinite;
+    }
+
+    @keyframes pulseDot {
+
+      0%,
+      100% {
+        opacity: 1;
+        transform: scale(1);
+      }
+
+      50% {
+        opacity: 0.4;
+        transform: scale(0.8);
+      }
+    }
+
+    .play-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 12px 24px;
+      border-radius: 8px;
+      font-family: var(--font-display);
+      font-size: 13px;
+      font-weight: 900;
+      letter-spacing: 2px;
+      border: none;
+      background: var(--brand-cyan);
+      color: #000;
+      box-shadow: 0 0 20px rgba(0, 229, 255, 0.4);
+      transition: all 0.3s;
+      text-transform: uppercase;
+    }
+
+    .game-card:hover .play-btn {
+      box-shadow: 0 0 30px rgba(0, 229, 255, 0.7);
+      transform: scale(1.05);
+    }
+
+    .play-btn svg {
+      width: 16px;
+      height: 16px;
     }
 
     /* ── STATS ── */
     .stats-bar {
       display: flex;
       justify-content: center;
-      gap: clamp(20px, 6vw, 80px);
-      padding: 40px 20px;
-      border-top: 1px solid rgba(255, 255, 255, 0.05);
-      border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-      margin-top: 40px;
-      margin-bottom: 40px;
+      gap: clamp(40px, 8vw, 120px);
+      padding: 60px 20px;
+      background: linear-gradient(90deg, transparent, rgba(0, 229, 255, 0.05), transparent);
+      border-top: 1px solid rgba(0, 229, 255, 0.1);
+      border-bottom: 1px solid rgba(0, 229, 255, 0.1);
+      margin-top: 20px;
+      margin-bottom: 60px;
     }
 
     .stat-item {
@@ -273,326 +502,73 @@
 
     .stat-num {
       font-family: var(--font-display);
-      font-size: clamp(28px, 5vw, 48px);
+      font-size: clamp(36px, 6vw, 56px);
       font-weight: 900;
-      background: linear-gradient(135deg, var(--cyan), var(--purple));
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
+      color: #fff;
+      text-shadow: 0 0 20px var(--brand-cyan-glow);
+      margin-bottom: 5px;
     }
 
     .stat-label {
-      font-size: 13px;
-      letter-spacing: 0.12em;
-      color: var(--dim);
-      margin-top: 4px;
-    }
-
-    /* ── GAMES SECTION (Now at the top) ── */
-    .games-section {
-      padding: 40px 20px 60px;
-      max-width: 1200px;
-      margin: 0 auto;
-      position: relative;
-      z-index: 2;
-    }
-
-    .section-line {
-      display: flex;
-      align-items: center;
-      gap: 16px;
-      margin-bottom: 30px;
-    }
-
-    .section-line::after {
-      content: '';
-      flex: 1;
-      height: 1px;
-      background: rgba(0, 255, 242, 0.12);
-    }
-
-    .section-title {
-      font-family: var(--font-display);
-      font-size: clamp(20px, 4vw, 32px);
-      font-weight: 700;
-      letter-spacing: 0.12em;
-      color: var(--text);
-    }
-
-    .games-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-      gap: 24px;
-    }
-
-    /* ── GAME CARD ── */
-    .game-card {
-      position: relative;
-      background: var(--card-bg);
-      border-radius: 16px;
-      border: 1px solid rgba(255, 255, 255, 0.06);
-      overflow: hidden;
-      transition: transform 0.25s, box-shadow 0.25s, border-color 0.25s;
-      cursor: pointer;
-      text-decoration: none;
-      display: block;
-    }
-
-    .game-card:hover {
-      transform: translateY(-6px) scale(1.01);
-      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.6);
-    }
-
-    .game-card.active:hover {
-      border-color: var(--cyan);
-      box-shadow: 0 20px 60px rgba(0, 255, 242, 0.15);
-    }
-
-    .game-card.coming-soon {
-      opacity: 0.55;
-      cursor: default;
-      pointer-events: none;
-    }
-
-    .card-banner {
-      height: 200px;
-      position: relative;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      overflow: hidden;
-    }
-
-    /* DashKill banner */
-    .banner-dashkill {
-      background: linear-gradient(135deg, #060610 0%, #0d1a2a 40%, #0a0f1a 100%);
-    }
-
-    .banner-dashkill canvas {
-      position: absolute;
-      inset: 0;
-      width: 100%;
-      height: 100%;
-    }
-
-    .banner-dashkill .banner-title {
-      font-family: var(--font-display);
-      font-size: 32px;
-      font-weight: 900;
-      position: relative;
-      z-index: 2;
-      text-align: center;
-      letter-spacing: 0.04em;
-    }
-
-    .banner-dashkill .banner-title .dk {
-      color: #fff;
-      text-shadow: 0 0 30px rgba(0, 255, 136, 0.6);
-    }
-
-    .banner-dashkill .banner-title .kill {
-      color: var(--magenta);
-      text-shadow: 0 0 30px rgba(255, 0, 170, 0.7);
-    }
-
-    .banner-dashkill .banner-title .io {
-      color: var(--cyan);
-      font-size: 16px;
-      vertical-align: super;
-    }
-
-    /* Coming Soon banners */
-    .banner-soon {
-      background: linear-gradient(135deg, #0d0d18 0%, #12101e 100%);
-      flex-direction: column;
-      gap: 16px;
-    }
-
-    .banner-soon-icon {
-      width: 56px;
-      height: 56px;
-      opacity: 0.6;
-    }
-
-    .banner-soon-label {
-      font-family: var(--font-display);
-      font-size: 11px;
-      letter-spacing: 0.25em;
-      color: var(--dim);
-    }
-
-    .card-body {
-      padding: 20px 22px 22px;
-    }
-
-    .card-name {
-      font-family: var(--font-display);
-      font-size: 18px;
-      font-weight: 700;
-      letter-spacing: 0.06em;
-      margin-bottom: 6px;
-    }
-
-    .card-desc {
       font-size: 14px;
-      color: rgba(232, 232, 240, 0.55);
-      line-height: 1.5;
-      margin-bottom: 16px;
-    }
-
-    .card-meta {
-      display: flex;
-      gap: 8px;
-      flex-wrap: wrap;
-      margin-bottom: 18px;
-    }
-
-    .tag {
-      font-size: 11px;
-      font-weight: 700;
-      letter-spacing: 0.08em;
-      padding: 3px 10px;
-      border-radius: 12px;
-      background: rgba(255, 255, 255, 0.05);
-      color: var(--dim);
-    }
-
-    .card-footer {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-    }
-
-    .players-online {
-      font-size: 12px;
-      color: var(--dim);
-      display: flex;
-      align-items: center;
-      gap: 6px;
-    }
-
-    .pulse-dot {
-      width: 7px;
-      height: 7px;
-      border-radius: 50%;
-      background: var(--green);
-      animation: pulseDot 1.5s ease-in-out infinite;
-      display: inline-block;
-    }
-
-    @keyframes pulseDot {
-
-      0%,
-      100% {
-        opacity: 1;
-        transform: scale(1)
-      }
-
-      50% {
-        opacity: 0.4;
-        transform: scale(0.7)
-      }
-    }
-
-    .play-btn {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      padding: 10px 22px;
-      border-radius: 10px;
-      font-family: var(--font-display);
-      font-size: 12px;
-      font-weight: 700;
-      letter-spacing: 0.1em;
-      border: none;
-      cursor: pointer;
-      background: linear-gradient(135deg, var(--cyan), var(--green));
-      color: #050510;
-      box-shadow: 0 4px 20px rgba(0, 255, 242, 0.3);
-      transition: transform 0.15s, box-shadow 0.15s;
-      text-decoration: none;
-    }
-
-    .play-btn:hover {
-      transform: scale(1.05);
-      box-shadow: 0 6px 28px rgba(0, 255, 242, 0.5);
-    }
-
-    .play-btn svg {
-      width: 14px;
-      height: 14px;
-    }
-
-    .soon-btn {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      padding: 10px 22px;
-      border-radius: 10px;
-      font-family: var(--font-display);
-      font-size: 12px;
-      font-weight: 700;
-      letter-spacing: 0.1em;
-      border: 1px solid rgba(255, 255, 255, 0.1);
-      background: transparent;
-      color: var(--dim);
-    }
-
-    .soon-btn svg {
-      width: 13px;
-      height: 13px;
+      font-weight: 600;
+      letter-spacing: 3px;
+      color: var(--brand-cyan);
+      text-transform: uppercase;
     }
 
     /* ── FOOTER ── */
     footer {
       position: relative;
       z-index: 1;
-      border-top: 1px solid rgba(255, 255, 255, 0.05);
-      padding: 32px 40px;
+      background: rgba(2, 4, 10, 0.9);
+      border-top: 1px solid rgba(0, 229, 255, 0.1);
+      padding: 40px 50px;
       display: flex;
       align-items: center;
       justify-content: space-between;
-      font-size: 13px;
-      color: var(--dim);
+      font-size: 14px;
+      color: var(--brand-dim);
       flex-wrap: wrap;
-      gap: 12px;
+      gap: 20px;
     }
 
     .footer-logo {
       display: flex;
       align-items: center;
-      gap: 8px;
-      font-family: var(--font-display);
-      color: var(--cyan);
-      font-size: 16px;
-      font-weight: 700;
     }
 
     .footer-logo img {
-      height: 48px;
+      height: 40px;
       width: auto;
       object-fit: contain;
-      opacity: 0.8;
+      opacity: 0.7;
+      transition: opacity 0.3s;
+    }
+
+    .footer-logo img:hover {
+      opacity: 1;
     }
 
     .footer-links {
       display: flex;
-      gap: 20px;
+      gap: 30px;
+      font-weight: 600;
     }
 
     .footer-links a {
-      color: var(--dim);
+      color: var(--brand-dim);
       text-decoration: none;
-      transition: color 0.2s;
+      transition: color 0.3s;
     }
 
     .footer-links a:hover {
-      color: var(--cyan);
+      color: var(--brand-cyan);
     }
 
-    @media (max-width: 640px) {
+    @media (max-width: 768px) {
       nav {
-        padding: 14px 20px;
+        padding: 15px 20px;
       }
 
       .nav-links {
@@ -604,13 +580,18 @@
       }
 
       .stats-bar {
-        gap: 24px;
+        gap: 30px;
         flex-wrap: wrap;
+      }
+
+      .stat-item {
+        width: 40%;
       }
 
       footer {
         flex-direction: column;
         text-align: center;
+        justify-content: center;
       }
     }
   </style>
@@ -619,69 +600,6 @@
 <body>
 
   <canvas id="bg-canvas"></canvas>
-
-  <!-- SVG ICON DEFS (reusable) -->
-  <svg style="display:none" xmlns="http://www.w3.org/2000/svg">
-    <defs>
-      <!-- Crown -->
-      <symbol id="icon-crown" viewBox="0 0 40 32">
-        <polygon points="2,28 8,10 20,22 32,10 38,28" fill="none" stroke="currentColor" stroke-width="2.5"
-          stroke-linejoin="round" />
-        <rect x="2" y="27" width="36" height="4" rx="2" fill="currentColor" />
-        <circle cx="2" cy="10" r="2.5" fill="currentColor" />
-        <circle cx="20" cy="4" r="2.5" fill="currentColor" />
-        <circle cx="38" cy="10" r="2.5" fill="currentColor" />
-      </symbol>
-      <!-- Lightning bolt (play) -->
-      <symbol id="icon-bolt" viewBox="0 0 24 24">
-        <polygon points="13,2 4,14 12,14 11,22 20,10 12,10" fill="currentColor" />
-      </symbol>
-      <!-- Lock -->
-      <symbol id="icon-lock" viewBox="0 0 24 24">
-        <rect x="5" y="11" width="14" height="10" rx="2" fill="none" stroke="currentColor" stroke-width="2" />
-        <path d="M8 11V7a4 4 0 0 1 8 0v4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
-      </symbol>
-      <!-- Check (free) -->
-      <symbol id="icon-check" viewBox="0 0 24 24">
-        <circle cx="12" cy="12" r="10" fill="none" stroke="currentColor" stroke-width="2" />
-        <polyline points="7,12 10,15 17,9" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
-          stroke-linejoin="round" />
-      </symbol>
-      <!-- Download arrow  -->
-      <symbol id="icon-nodownload" viewBox="0 0 24 24">
-        <circle cx="12" cy="12" r="10" fill="none" stroke="currentColor" stroke-width="2" />
-        <line x1="8" y1="8" x2="16" y2="16" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" />
-        <line x1="16" y1="8" x2="8" y2="16" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" />
-      </symbol>
-      <!-- Globe (multiplayer) -->
-      <symbol id="icon-globe" viewBox="0 0 24 24">
-        <circle cx="12" cy="12" r="10" fill="none" stroke="currentColor" stroke-width="2" />
-        <ellipse cx="12" cy="12" rx="4" ry="10" fill="none" stroke="currentColor" stroke-width="1.5" />
-        <line x1="2" y1="12" x2="22" y2="12" stroke="currentColor" stroke-width="1.5" />
-      </symbol>
-      <!-- Chevron down -->
-      <symbol id="icon-chevron-down" viewBox="0 0 24 24">
-        <polyline points="6,9 12,15 18,9" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
-          stroke-linejoin="round" />
-      </symbol>
-      <!-- Wave (slime) -->
-      <symbol id="icon-wave" viewBox="0 0 60 40">
-        <path d="M0,20 C10,8 20,32 30,20 C40,8 50,32 60,20" fill="none" stroke="currentColor" stroke-width="3"
-          stroke-linecap="round" />
-        <path d="M0,30 C10,18 20,42 30,30 C40,18 50,42 60,30" fill="none" stroke="currentColor" stroke-width="2"
-          stroke-linecap="round" opacity="0.5" />
-      </symbol>
-      <!-- Rocket (void) -->
-      <symbol id="icon-rocket" viewBox="0 0 40 50">
-        <path d="M20,4 C20,4 32,12 32,28 L20,40 L8,28 C8,12 20,4 20,4Z" fill="none" stroke="currentColor"
-          stroke-width="2.5" stroke-linejoin="round" />
-        <circle cx="20" cy="20" r="5" fill="none" stroke="currentColor" stroke-width="2" />
-        <path d="M8,28 L2,36 L12,34Z" fill="currentColor" opacity="0.6" />
-        <path d="M32,28 L38,36 L28,34Z" fill="currentColor" opacity="0.6" />
-        <line x1="20" y1="40" x2="20" y2="48" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" />
-      </symbol>
-    </defs>
-  </svg>
 
   <!-- NAV -->
   <nav>
@@ -695,35 +613,77 @@
   </nav>
 
   <main>
-    <!-- GAMES (Moved up to be immediately visible) -->
+    <!-- HERO -->
+    <section class="hero" id="about">
+      <div class="hero-icon">
+        <img src="assets/iolord-logo-nobg.png" alt="IOLORD">
+      </div>
+      <p class="hero-desc">No downloads. No accounts. Premium HTML5 & WebGL games directly in your browser. Just click
+        and play instantly.</p>
+
+      <div class="hero-badges">
+        <span class="badge">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+            <polyline points="20 6 9 17 4 12"></polyline>
+          </svg>
+          100% FREE
+        </span>
+        <span class="badge">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+            <path d="M13 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"></path>
+            <polyline points="13 2 13 9 20 9"></polyline>
+          </svg>
+          NO DOWNLOAD
+        </span>
+        <span class="badge">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+            <circle cx="12" cy="12" r="10"></circle>
+            <line x1="2" y1="12" x2="22" y2="12"></line>
+            <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+          </svg>
+          MULTIPLAYER
+        </span>
+      </div>
+    </section>
+
+    <!-- GAMES -->
     <section class="games-section" id="games">
       <div class="section-line">
-        <h2 class="section-title">PLAY NOW</h2>
+        <h2 class="section-title">FEATURED GAMES</h2>
       </div>
 
       <div class="games-grid">
-        <!-- DashKill Card -->
-        <a class="game-card active" href="https://dashkill.iolord.com" target="_blank" rel="noopener">
-          <div class="card-banner banner-dashkill">
-            <canvas id="dk-canvas"></canvas>
-            <div class="banner-title">
-              <span class="dk">DASH</span><span class="kill">KILL</span><span class="io">.io</span>
+
+        <!-- RAGRUSH (First item, per user request) -->
+        <a href="https://ragrush.iolord.com" target="_blank" class="game-card">
+          <div class="card-banner banner-ragrush">
+            <h3>RAG<span style="color: #ff2244;">RUSH</span></h3>
+            <!-- Decorative particles/shapes -->
+            <div
+              style="position: absolute; bottom: 10px; left: 20px; width: 0; height: 0; border-left: 15px solid transparent; border-right: 15px solid transparent; border-bottom: 30px solid #ff2244; transform: rotate(-20deg); opacity: 0.8; filter: drop-shadow(0 0 10px #ff2244);">
+            </div>
+            <div
+              style="position: absolute; top: 20px; right: 30px; width: 25px; height: 25px; background: #ffcc00; border-radius: 4px; transform: rotate(15deg); opacity: 0.8; filter: drop-shadow(0 0 10px #ffcc00);">
+            </div>
+            <div
+              style="position: absolute; top: 60%; left: 10%; width: 10px; height: 10px; border-radius: 50%; background: #00e5ff; box-shadow: 0 0 10px #00e5ff;">
             </div>
           </div>
           <div class="card-body">
-            <div class="card-name" style="color:#00ff88;">DashKill<span style="color:#ff00aa">.io</span></div>
-            <div class="card-desc">10-level tournament arena. Dash, attack, survive. Rise from Level 1 to Champion. 1HP
-              — one hit kills everything.</div>
+            <h3 class="card-title">
+              <span style="color:#fff;">Rag</span><span style="color:#ff2244;">Rush</span>
+            </h3>
+            <div class="card-desc">Premium ragdoll obstacle survival platformer. Navigate dynamic procedural terrain,
+              dodge deadly traps, and survive 60 levels of chaos.</div>
             <div class="card-meta">
-              <span class="tag">IO GAME</span>
-              <span class="tag">TOURNAMENT</span>
-              <span class="tag">MULTIPLAYER</span>
-              <span class="tag">1HP</span>
+              <span class="tag">PLATFORMER</span>
+              <span class="tag">RAGDOLL</span>
+              <span class="tag">SURVIVAL</span>
             </div>
             <div class="card-footer">
               <div class="players-online">
-                <span class="pulse-dot"></span>
-                <span id="dk-online">Loading...</span>
+                <span class="pulse-dot" style="background: #00e5ff; box-shadow: 0 0 10px #00e5ff;"></span>
+                <span style="color:var(--brand-cyan);">Play Now!</span>
               </div>
               <span class="play-btn">
                 <svg viewBox="0 0 24 24" fill="currentColor">
@@ -735,31 +695,29 @@
           </div>
         </a>
 
-                <!-- RagRush Game Card -->
-        <a href="https://ragrush.iolord.com" target="_blank" class="game-card" style="text-decoration: none; cursor: pointer;">
-          <div class="card-banner" style="background: linear-gradient(135deg, #080812, #101020); position: relative; overflow: hidden; padding: 20px; display: flex; align-items: center; justify-content: center; height: 180px;">
-            <h3 style="font-family: 'Orbitron', monospace; font-size: 2.2rem; font-weight: 900; letter-spacing: 4px; color: #fff; margin: 0; text-shadow: 0 0 20px rgba(255, 34, 68, 0.5);">
-              RAG<span style="color: #ff2244;">RUSH</span>
-            </h3>
-            <div style="position: absolute; bottom: 10px; left: 20px; width: 0; height: 0; border-left: 10px solid transparent; border-right: 10px solid transparent; border-bottom: 20px solid #ff2244; transform: rotate(-30deg); opacity: 0.6; filter: blur(1px);"></div>
-            <div style="position: absolute; top: 15px; right: 25px; width: 0; height: 0; border-left: 15px solid transparent; border-right: 15px solid transparent; border-bottom: 30px solid #ffcc00; transform: rotate(15deg); opacity: 0.4; filter: blur(2px);"></div>
+        <!-- DASHKILL.IO -->
+        <a class="game-card" href="https://dashkill.iolord.com" target="_blank" rel="noopener">
+          <div class="card-banner banner-dashkill">
+            <canvas id="dk-canvas" style="position:absolute; inset:0; width:100%; height:100%;"></canvas>
+            <h3><span style="color:#fff;">DASH</span><span style="color:#00ff88;">KILL</span><span
+                style="color:#00e5ff; font-size:1.2rem; vertical-align:super;">.io</span></h3>
           </div>
           <div class="card-body">
-            <h3 class="card-title" style="margin:0;">
-              <span style="color:#fff;">Rag</span><span style="color:#ff2244;">Rush</span>
-            </h3>
-            <div class="card-desc" style="margin-top:10px;">Ragdoll obstacle survival platformer. Navigate dynamic terrain and survive 60 levels of chaos.</div>
-            <div class="card-meta" style="margin-top:10px;">
-              <span class="tag">PLATFORMER</span>
-              <span class="tag">RAGDOLL</span>
-              <span class="tag">SURVIVAL</span>
+            <h3 class="card-title" style="color:#fff;">DashKill<span style="color:#00ff88;">.io</span></h3>
+            <div class="card-desc">10-level multiplayer tournament arena. Dash, attack, survive. Rise from Level 1 to
+              Champion. 1HP — one hit kills everything.</div>
+            <div class="card-meta">
+              <span class="tag">IO GAME</span>
+              <span class="tag">MULTIPLAYER</span>
+              <span class="tag">TOURNAMENT</span>
+              <span class="tag">1HP</span>
             </div>
-            <div class="card-footer" style="margin-top:20px;">
+            <div class="card-footer">
               <div class="players-online">
-                <span class="pulse-dot"></span>
-                <span style="color:#00ff88;">Play Now!</span>
+                <span class="pulse-dot" style="background:#00ff88; box-shadow: 0 0 10px #00ff88;"></span>
+                <span id="dk-online" style="color:#00ff88;">Loading...</span>
               </div>
-              <span class="play-btn" style="background: rgba(255, 34, 68, 0.15); color: #ff2244; border-color: rgba(255, 34, 68, 0.4); text-shadow: 0 0 10px rgba(255, 34, 68, 0.4);">
+              <span class="play-btn">
                 <svg viewBox="0 0 24 24" fill="currentColor">
                   <polygon points="5,3 19,12 5,21" />
                 </svg>
@@ -768,59 +726,23 @@
             </div>
           </div>
         </a>
+
+      </div>
     </section>
 
-
-    <!-- HERO -->
-    <section class="hero" id="about">
-      <div class="hero-icon">
-        <img src="assets/iolord-logo-nobg.png" alt="IOLORD">
-      </div>
-      <p class="hero-desc">No downloads. No accounts. Just pick a game and play instantly — with players from around the
-        world.</p>
-
-      <div class="hero-badges">
-        <span class="badge badge-free">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <circle cx="12" cy="12" r="10" />
-            <polyline points="7,12 10,15 17,9" stroke-linecap="round" stroke-linejoin="round" />
-          </svg>
-          100% FREE
-        </span>
-        <span class="badge badge-no-download">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <rect x="3" y="3" width="18" height="18" rx="2" />
-            <line x1="9" y1="9" x2="15" y2="15" stroke-linecap="round" />
-            <line x1="15" y1="9" x2="9" y2="15" stroke-linecap="round" />
-          </svg>
-          NO DOWNLOAD
-        </span>
-        <span class="badge badge-multiplayer">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <circle cx="12" cy="12" r="10" />
-            <ellipse cx="12" cy="12" rx="4" ry="10" />
-            <line x1="2" y1="12" x2="22" y2="12" />
-          </svg>
-          MULTIPLAYER
-        </span>
-      </div>
-
-    </section>
-
-
-    <!-- STATS (Moved below games) -->
+    <!-- STATS -->
     <div class="stats-bar">
       <div class="stat-item">
-        <div class="stat-num">1</div>
-        <div class="stat-label">GAMES LIVE</div>
+        <div class="stat-num">2</div> <!-- Updated to 2 -->
+        <div class="stat-label">Games Live</div>
       </div>
       <div class="stat-item">
-        <div class="stat-num">10</div>
-        <div class="stat-label">ARENA LEVELS</div>
+        <div class="stat-num">70+</div>
+        <div class="stat-label">Total Levels</div>
       </div>
       <div class="stat-item">
         <div class="stat-num">∞</div>
-        <div class="stat-label">REPLAYS</div>
+        <div class="stat-label">Replayability</div>
       </div>
     </div>
   </main>
@@ -829,29 +751,39 @@
     <div class="footer-logo">
       <img src="assets/iolord-logo-nobg.png" alt="IOLORD">
     </div>
-    <div>© 2025 IOLORD — Free browser games for everyone.</div>
+    <div>© 2026 IOLORD — Premium free browser games for everyone.</div>
     <div class="footer-links">
-      <a href="https://dashkill-io.onrender.com" target="_blank" rel="noopener">DashKill.io</a>
+      <a href="https://ragrush.iolord.com" target="_blank">RagRush</a>
+      <a href="https://dashkill.iolord.com" target="_blank">DashKill.io</a>
     </div>
   </footer>
 
   <script>
-    // ── BACKGROUND PARTICLE CANVAS ──
+    // ── PREMIUM BACKGROUND PARTICLES ──
     (function () {
       const canvas = document.getElementById('bg-canvas');
       const ctx = canvas.getContext('2d');
       let W, H, particles = [];
       function resize() { W = canvas.width = window.innerWidth; H = canvas.height = window.innerHeight; }
       function mkP() {
-        return { x: Math.random() * W, y: Math.random() * H, vx: (Math.random() - 0.5) * 0.3, vy: (Math.random() - 0.5) * 0.3, r: 0.5 + Math.random() * 1.5, a: 0.04 + Math.random() * 0.12, c: ['#00fff2', '#ff00aa', '#aa44ff', '#00ff88', '#ffcc00'][Math.floor(Math.random() * 5)] };
+        return {
+          x: Math.random() * W,
+          y: Math.random() * H,
+          vx: (Math.random() - 0.5) * 0.2,
+          vy: (Math.random() - 0.5) * 0.2,
+          r: Math.random() * 2,
+          a: 0.2 + Math.random() * 0.5,
+          c: '#00e5ff'
+        };
       }
-      function init() { resize(); particles = Array.from({ length: 80 }, mkP); }
+      function init() { resize(); particles = Array.from({ length: 100 }, mkP); }
       function draw() {
         ctx.clearRect(0, 0, W, H);
         for (const p of particles) {
           p.x += p.vx; p.y += p.vy;
           if (p.x < 0) p.x = W; if (p.x > W) p.x = 0; if (p.y < 0) p.y = H; if (p.y > H) p.y = 0;
-          ctx.globalAlpha = p.a; ctx.fillStyle = p.c;
+          ctx.globalAlpha = p.a;
+          ctx.fillStyle = p.c;
           ctx.beginPath(); ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2); ctx.fill();
         }
         ctx.globalAlpha = 1;
@@ -861,7 +793,7 @@
       init(); draw();
     })();
 
-    // ── DASHKILL CARD ANIMATION ──
+    // ── DASHKILL CARD CANVAS ──
     (function () {
       const canvas = document.getElementById('dk-canvas');
       if (!canvas) return;
@@ -870,10 +802,10 @@
       function resize() { canvas.width = canvas.offsetWidth; canvas.height = canvas.offsetHeight; }
       function init() {
         resize();
-        dots = Array.from({ length: 12 }, () => ({
+        dots = Array.from({ length: 15 }, () => ({
           x: Math.random() * canvas.width, y: Math.random() * canvas.height,
-          r: 4 + Math.random() * 8, vx: (Math.random() - 0.5) * 1.5, vy: (Math.random() - 0.5) * 1.5,
-          c: ['#00ff88', '#ff0066', '#00ccff', '#ffcc00', '#aa44ff'][Math.floor(Math.random() * 5)]
+          r: 3 + Math.random() * 6, vx: (Math.random() - 0.5) * 1.0, vy: (Math.random() - 0.5) * 1.0,
+          c: ['#00ff88', '#00e5ff', '#ff00aa'][Math.floor(Math.random() * 3)]
         }));
       }
       function draw() {
@@ -882,8 +814,8 @@
           d.x += d.vx; d.y += d.vy;
           if (d.x < 0 || d.x > canvas.width) d.vx *= -1;
           if (d.y < 0 || d.y > canvas.height) d.vy *= -1;
-          ctx.globalAlpha = 0.75; ctx.fillStyle = d.c;
-          ctx.shadowBlur = 14; ctx.shadowColor = d.c;
+          ctx.globalAlpha = 0.6; ctx.fillStyle = d.c;
+          ctx.shadowBlur = 10; ctx.shadowColor = d.c;
           ctx.beginPath(); ctx.arc(d.x, d.y, d.r, 0, Math.PI * 2); ctx.fill();
           ctx.shadowBlur = 0;
         }
@@ -894,7 +826,7 @@
       window.addEventListener('resize', resize);
     })();
 
-    // ── LIVE PLAYER COUNT ──
+    // ── DASHKILL LIVE PLAYER COUNT ──
     (function () {
       const el = document.getElementById('dk-online');
       async function fetchCount() {
@@ -908,7 +840,6 @@
       setInterval(fetchCount, 30000);
     })();
   </script>
-
 </body>
 
 </html>
