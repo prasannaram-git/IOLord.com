@@ -8,7 +8,7 @@
   <!-- ═══ PRIMARY SEO ═══ -->
   <title>IOLORD — Play Top Free Browser .IO Games Online | No Download</title>
   <meta name="description"
-    content="IOLORD brings you handcrafted browser games built for instant fun. Jump into RagRush, a 60-level ragdoll platformer, or battle live players in DashKill.io — all free, no downloads, no sign-ups. Built by indie dev Prasanna Ram Kulal.">
+    content="IOLORD brings you handcrafted browser games built for instant fun. Jump into RagRush, a 60-level ragdoll platformer, battle live players in DashKill.io, or play Punch Adventure — all free, no downloads, no sign-ups. Built by indie dev Prasanna Ram Kulal.">
   <meta name="keywords"
     content="iolord, io games, free browser games, online games, ragrush, dashkill io, play games online free, web games, unblocked games, html5 games, webgl games, ragdoll games, multiplayer io games, arena games, platformer games, indie games, browser gaming, instant play games">
   <meta name="author" content="Prasanna Ram Kulal">
@@ -125,6 +125,28 @@
     "image": "https://www.iolord.com/assets/games/dashkill-thumb.png",
     "playMode": "MultiPlayer",
     "numberOfPlayers": { "@type": "QuantitativeValue", "minValue": 2, "maxValue": 50 }
+  }
+  </script>
+
+
+  <!-- ═══ STRUCTURED DATA — VideoGame (Punch Adventure) ═══ -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "VideoGame",
+    "name": "Punch Adventure",
+    "url": "https://punchadventure.iolord.com/",
+    "description": "A premium 2D platformer where a baby monkey fights bully monkeys to protect its toy. 60 levels across 6 zoo worlds with surprise ground collapses, swinging vines, and atmospheric parallax forests.",
+    "genre": ["Platformer", "Adventure", "Action"],
+    "gamePlatform": "Web Browser",
+    "applicationCategory": "Game",
+    "operatingSystem": "Any",
+    "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+    "author": { "@type": "Person", "name": "Prasanna Ram Kulal" },
+    "publisher": { "@type": "Organization", "name": "IOLORD" },
+    "image": "https://www.iolord.com/assets/games/punchadventure-thumb.png",
+    "playMode": "SinglePlayer",
+    "numberOfPlayers": { "@type": "QuantitativeValue", "value": 1 }
   }
   </script>
 
@@ -250,7 +272,11 @@
         <path d="M23 21v-2a4 4 0 0 0-3-3.87" />
         <path d="M16 3.13a4 4 0 0 1 0 7.75" />
       </svg><span>Multiplayer</span></a>
-    <a href="#" class="sidebar-item" data-filter="arena"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+    <a href="#" class="sidebar-item" data-filter="adventure"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+        stroke-width="2">
+        <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z" />
+      </svg><span>Adventure</span></a>
+        <a href="#" class="sidebar-item" data-filter="arena"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
         stroke-width="2">
         <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
       </svg><span>Arena</span></a>
@@ -297,6 +323,23 @@
                 class="hero-tag">Multiplayer</span><span class="hero-tag">Arena</span></div>
           </div>
         </a>
+
+        <a href="https://punchadventure.iolord.com" target="_blank" rel="noopener" class="hero-card" id="hero-punchadventure"
+          data-categories="platformer,adventure">
+          <img src="assets/games/punchadventure-thumb.png"
+            alt="Punch Adventure gameplay — baby monkey platforming through atmospheric forest with enemies" class="hero-thumb" width="800"
+            height="450" loading="eager">
+          <div class="hero-card-overlay"></div>
+          <div class="hero-play-btn"><svg viewBox="0 0 24 24" fill="currentColor">
+              <polygon points="5,3 19,12 5,21" />
+            </svg></div>
+          <div class="hero-card-info">
+            <div class="hero-card-title">Punch Adventure</div>
+            <div class="hero-card-desc">Baby monkey vs bully monkeys. 60 levels, 6 zoo worlds, surprise traps everywhere.</div>
+            <div class="hero-card-tags"><span class="hero-tag">Platformer</span><span
+                class="hero-tag">Adventure</span><span class="hero-tag">Action</span></div>
+          </div>
+        </a>
       </div>
     </section>
 
@@ -336,6 +379,22 @@
           <div class="card-info"><span class="card-title">DashKill.io</span><span class="card-live"><span
                 class="live-dot"></span><span id="dk-live">Live</span></span></div>
         </a>
+
+        <a href="https://punchadventure.iolord.com" target="_blank" rel="noopener" class="game-card" id="card-punchadventure"
+          data-categories="platformer,adventure">
+          <div class="card-thumb-wrapper">
+            <img src="assets/games/punchadventure-thumb.png" alt="Punch Adventure" class="card-thumb" width="400" height="225"
+              loading="lazy">
+            <span class="card-badge badge-hot">⭐ New</span>
+            <div class="card-overlay">
+              <div class="play-circle"><svg viewBox="0 0 24 24" fill="currentColor">
+                  <polygon points="5,3 19,12 5,21" />
+                </svg></div>
+            </div>
+          </div>
+          <div class="card-info"><span class="card-title">Punch Adventure</span><span class="card-tag-small">Platformer</span>
+          </div>
+        </a>
       </div>
     </section>
 
@@ -354,7 +413,7 @@
           <p class="faq-a">Right now, IOLORD features two original titles. <strong>RagRush</strong> is a 60-level
             ragdoll obstacle survival platformer where you dodge deadly traps and navigate procedural terrain.
             <strong>DashKill.io</strong> is a real-time multiplayer .io arena tournament where one hit eliminates anyone
-            — and every level raises the stakes. More games are being developed.</p>
+            — and every level raises the stakes. <strong>Punch Adventure</strong> is a premium 2D platformer where a baby monkey fights bully monkeys to protect its toy across 60 levels in 6 zoo worlds — with surprise ground collapses, swinging vines, and atmospheric parallax forests.</p>
         </details>
         <details class="faq-item">
           <summary class="faq-q">Do I need to download anything or sign up?</summary>
@@ -407,6 +466,7 @@
         <h4>Games</h4>
         <a href="https://ragrush.iolord.com" target="_blank" rel="noopener">RagRush</a>
         <a href="https://dashkill.iolord.com" target="_blank" rel="noopener">DashKill.io</a>
+        <a href="https://punchadventure.iolord.com" target="_blank" rel="noopener">Punch Adventure</a>
       </div>
       <div class="footer-col">
         <h4>Categories</h4>
@@ -414,6 +474,7 @@
         <a href="#" data-filter-link="io">.io Games</a>
         <a href="#" data-filter-link="multiplayer">Multiplayer</a>
         <a href="#" data-filter-link="arena">Arena</a>
+        <a href="#" data-filter-link="adventure">Adventure</a>
         <a href="#" data-filter-link="survival">Survival</a>
       </div>
       <div class="footer-col">
@@ -429,7 +490,7 @@
   </footer>
 
   <script>
-    const GAMES = [{ name: 'RagRush', cardId: 'card-ragrush', heroId: 'hero-ragrush', url: 'https://ragrush.iolord.com', cats: ['platformer', 'survival'] }, { name: 'DashKill.io', cardId: 'card-dashkill', heroId: 'hero-dashkill', url: 'https://dashkill.iolord.com', cats: ['io', 'multiplayer', 'arena'] }];
+    const GAMES = [{ name: 'RagRush', cardId: 'card-ragrush', heroId: 'hero-ragrush', url: 'https://ragrush.iolord.com', cats: ['platformer', 'survival'] }, { name: 'DashKill.io', cardId: 'card-dashkill', heroId: 'hero-dashkill', url: 'https://dashkill.iolord.com', cats: ['io', 'multiplayer', 'arena'] }, { name: 'Punch Adventure', cardId: 'card-punchadventure', heroId: 'hero-punchadventure', url: 'https://punchadventure.iolord.com', cats: ['platformer', 'adventure'] }];
     const searchBar = document.getElementById('searchBar');
     searchBar.addEventListener('input', () => { const q = searchBar.value.toLowerCase().trim(); GAMES.forEach(g => { const m = !q || g.name.toLowerCase().includes(q) || g.cats.some(c => c.includes(q)); document.getElementById(g.cardId).style.display = m ? '' : 'none'; document.getElementById(g.heroId).style.display = m ? '' : 'none'; }); });
     document.querySelectorAll('.sidebar-item[data-filter]').forEach(b => { b.addEventListener('click', e => { e.preventDefault(); const f = b.dataset.filter; document.querySelectorAll('.sidebar-item').forEach(i => i.classList.remove('active')); b.classList.add('active'); searchBar.value = ''; GAMES.forEach(g => { const s = f === 'all' || g.cats.includes(f); document.getElementById(g.cardId).style.display = s ? '' : 'none'; document.getElementById(g.heroId).style.display = s ? '' : 'none'; }); window.scrollTo({ top: 0, behavior: 'smooth' }); }); });
