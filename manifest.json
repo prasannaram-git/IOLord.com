@@ -1,0 +1,22 @@
+{
+    "name": "IOLORD — Free Online Browser Games",
+    "short_name": "IOLORD",
+    "description": "Play the best free browser games at IOLORD. Instant play, zero downloads, no accounts needed.",
+    "start_url": "/",
+    "display": "standalone",
+    "background_color": "#0b0c10",
+    "theme_color": "#E8563F",
+    "icons": [
+        {
+            "src": "/favicon.png",
+            "sizes": "512x512",
+            "type": "image/png",
+            "purpose": "any maskable"
+        },
+        {
+            "src": "/assets/iolord-logo.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        }
+    ]
+}
